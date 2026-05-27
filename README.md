@@ -13,9 +13,13 @@ Developed using raw HTTP requests (via standard Python libraries) to keep extern
 ## ✨ Features
 
 - **🌐 Smart Platform Agnostic:** Uses coordinates-based GUI automation (`pyautogui`), making it compatible with WhatsApp Desktop, Discord, Slack, or any web-based messenger open on your screen.
+
 - **⚡ Lightweight Engine:** Built with raw `urllib` calls for AI inference. No need to install heavy SDKs like `google-generativeai` or `openai`.
+
 - **🗣️ Hilarious Banglish Persona:** Generates witty, friendly, and savage roasts in **Banglish** (Bengali written in English alphabet mixed with English) styled with emojis.
+  
 - **🎯 Targeting System:** Only responds if the last message in the selected region is from your specified target user (e.g. `Mummy`, `Rohan Das`).
+  
 - **🛡️ Robust Security Bypass:** Manually handles macOS SSL verification issues out of the box to prevent local certificate errors (`[SSL: CERTIFICATE_VERIFY_FAILED]`).
 
 ---
