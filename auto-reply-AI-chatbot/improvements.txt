@@ -1,0 +1,24 @@
+==================================================
+AUTO-REPLY AI CHATBOT: FUTURE IMPROVEMENTS PLAN
+==================================================
+
+1. DYNAMIC PERSONA CONFIGURATION
+Currently, the "savage Naruto" persona is hardcoded in the script. We can move the system prompt to the `.env` file so users can easily switch between different personalities (e.g., Professional, Romantic, Sarcastic, etc.) without touching the Python code.
+
+2. AVOID DUPLICATE REPLIES (STATE TRACKING)
+Currently, if the script scans quickly and our last reply hasn't rendered on screen yet, it might reply to the same message twice. We should implement a state tracker that stores the exact timestamp and text of the last message we replied to, ensuring we only reply to genuinely new messages.
+
+3. MULTI-USER SUPPORT
+Instead of monitoring a single TARGET_USER, the `.env` file could accept a comma-separated list of users (e.g., TARGET_USERS="Mummy, Sandip, Rohan"). The script would then generate a customized response depending on who sent the last message.
+
+4. BETTER CHAT CONTEXT PARSING
+Instead of sending the raw, unformatted clipboard text to the LLM, we can build a parser that strips out messy timestamps and feeds a clean JSON list of the last 5-10 messages to the AI. This will give the AI much better conversational context for its replies.
+
+5. HANDLING MEDIA MESSAGES
+When someone sends an image or voice note, WhatsApp copies it as "[Image]" or "[Voice Message]". We should add logic to detect these non-text messages and either skip them or have the AI generate a specific response like "I can't see images right now, what's that? 👀".
+
+6. GRAPHICAL USER INTERFACE (GUI)
+Build a simple graphical dashboard using `tkinter` or `customtkinter`. This would allow users to visually calibrate coordinates, edit their API keys, and click a "Start Bot" button, completely replacing the terminal and `.env` file workflow.
+
+7. BACKGROUND EXECUTION (ADVANCED)
+PyAutoGUI requires the chat window to be active and takes over the mouse. A major future improvement would be using OS-level accessibility APIs (like AppleScript for Mac or UIAutomation for Windows) or browser extensions (like Selenium/Puppeteer) to read and send messages completely in the background, allowing the user to continue using their computer normally while the bot runs.
